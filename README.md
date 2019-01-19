@@ -1,4 +1,4 @@
-Following [this tutorial](https://itnext.io/build-a-simple-ethereum-interplanetary-file-system-ipfs-react-js-dapp-23ff4914ce4e).
+Following [this tutorial](https://hackernoon.com/launch-a-decentralized-identity-application-using-the-developer-friendly-uport-react-truffle-box-95d1ddf176ea).
 
 ------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
