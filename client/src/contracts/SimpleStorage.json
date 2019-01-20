@@ -13,7 +13,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x60fe47b1"
     },
     {
       "constant": true,
@@ -27,7 +28,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x6d4ce63c"
     }
   ],
   "bytecode": "0x608060405234801561001057600080fd5b5060ec8061001f6000396000f3fe6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820a74bc8d8f23d3b5350cb610e9ef08d99101215de48e6bf9f62783885cde931470029",
@@ -544,9 +546,16 @@
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1548022546394": {
+      "events": {},
+      "links": {},
+      "address": "0xEd2D966BDB3cbB3E5b3b611c9Fa5bCB194b4B090",
+      "transactionHash": "0xa84dd84a7d38b3ffd74c3af0e159cb2d024806f3564e9bca1f210f58d1ad05b2"
+    }
+  },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-20T17:00:35.607Z",
+  "updatedAt": "2019-01-20T23:29:06.750Z",
   "devdoc": {
     "methods": {}
   },
