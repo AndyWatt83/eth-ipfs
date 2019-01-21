@@ -30,6 +30,7 @@ class App extends Component {
         this.handleReceiveIPFS = this.handleReceiveIPFS.bind(this);
     }
 
+
     componentDidMount = async () =>
     {
         try
@@ -55,13 +56,15 @@ class App extends Component {
 
             instance.inboxResponse()
                 .on('data', result => {
-                    this.setState({receivedIPFS: result.args[0]})
+                    this.setState({receivedIPFS: result.args[0]});
+                    console.log('inboxResponse handler');
+                    console.log(result.args[0]);
                 });
 
             // Set web3, accounts, and contract to the state, and then proceed with an
             // example of interacting with the contract's methods.
-            this.setState({ web3, accounts, contract: instance }, this.runExample);
-            this.setEventListeners();
+            this.setState({ web3, accounts, contract: instance });
+            //this.setEventListeners();
         }
         catch (error)
         {
@@ -75,16 +78,19 @@ class App extends Component {
 
     handleChangeAddress(event)
     {
+        console.log('handleChangeAddress');
         this.setState({formAddress: event.target.value});
     }
 
     handleChangeIPFS(event)
     {
+        console.log('handleChangeIPFS');
         this.setState({formIPFS: event.target.value});
     }
 
     handleSend(event)
     {
+        console.log('handleSend');
         event.preventDefault();
         const contract = this.state.contract
         const account = this.state.accounts[0]
@@ -100,6 +106,7 @@ class App extends Component {
 
     handleReceiveIPFS(event)
     {
+        console.log('handleReceiveIPFS');
         event.preventDefault();
         const contract = this.state.contract;
         const account = this.state.accounts[0];
@@ -141,26 +148,26 @@ class App extends Component {
         })
     };
 
-    runExample = async () => {
-        // const { accounts, contract } = this.state;
+    // runExample = async () => {
+    //     // const { accounts, contract } = this.state;
 
-        // // Stores a given value, 5 by default.
-        // await contract.methods.set(5).send({ from: accounts[0] });
+    //     // // Stores a given value, 5 by default.
+    //     // await contract.methods.set(5).send({ from: accounts[0] });
 
-        // // Get the value from the contract to prove it worked.
-        // const response = await contract.methods.get().call();
+    //     // // Get the value from the contract to prove it worked.
+    //     // const response = await contract.methods.get().call();
 
-        // // Update state with the result.
-        // this.setState({ storageValue: response });
-    };
+    //     // // Update state with the result.
+    //     // this.setState({ storageValue: response });
+    // };
 
-    setEventListeners()
-    {
-        this.state.contract.inboxResponse()
-        .on('data', result => {
-            this.setState({receivedIPFS: result.args[0]})
-        });
-    }
+    // setEventListeners()
+    // {
+    //     this.state.contract.inboxResponse()
+    //     .on('data', result => {
+    //         this.setState({receivedIPFS: result.args[0]})
+    //     });
+    // }
 
     render() {
         if (!this.state.web3)
